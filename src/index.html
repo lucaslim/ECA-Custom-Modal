@@ -1,0 +1,73 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+
+            .custom-modal {
+              position: absolute;
+              top: 0;
+              left: 0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: rgb(0,0,0);
+              background: rgba(0,0,0,0.8);
+              opacity: 0;
+              height: 100%;
+              width:100%;
+              z-index: -1;
+              overflow-x: hidden;
+              transition: opacity .5s ease-in;
+            }
+
+            .custom-modal.active {
+              display: flex;
+              opacity: 0.8;
+              z-index: 1
+            }
+
+            .custom-modal > .wrapper {
+              position: relative;
+              padding: 50px;
+              background: rgba(255,255,255,0.8);
+              z-index: 1;
+            }
+            
+            .custom-modal .close-button {
+              position: absolute;
+              top: 0;
+              right: 0;
+            }
+
+        </style>
+    </head>
+    <body>
+      <a class="myModal" target="_blank" href="./test.html" data-container-id="test">Modal</a>  
+      <a class="myModal" target="_blank" href="./test.html" data-container-id="test2">Modal2</a>
+    </body>
+    <!-- <div class="custom-modal"><div class="overlay"></div><div class="content"><div id="test">
+  <p>this is a paragraph</p>
+  <p>this is a paragraph</p>
+  <p>this is a paragraph</p>
+  <p>this is a paragraph</p>
+  <p>this is a paragraph</p>
+ </div></div></div> -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="modal.js"></script>
+    <script>
+      $('.myModal').customModal();
+    </script>
+</html>
